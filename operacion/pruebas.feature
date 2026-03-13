@@ -1,5 +1,6 @@
 ## Escenarios
 
-| Escenario | Acción |
+| escenario | pasos |
 | --- | --- |
-| Suma simple | Dar 2 como primer número y 3 como segundo número <br> => Debería mostrar 5 como resultado |
+| Suma de números | Dado que introduzco 5 
+ y luego introduzco 6<br>Cuando ejecuto el programa<br>Entonces el resultado debe ser 11 |
