@@ -1,0 +1,7 @@
+graph TD
+A[Inicio]-->B(Display: "Introduce el primer número:")-->C{Espera input}
+C-->D[Num1]-->E[Display: "Introduce el segundo número:"]-->F{Espera input}
+F-->G[Num2]-->H(Realiza suma)-->I[Display: "El resultado es:"]-->J[Fin]
+
+classDef pen stroke-width: 3px;
+class A,B,I pen;
