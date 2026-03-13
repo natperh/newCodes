@@ -8,14 +8,15 @@ class SumaTest {
     @Test
     void pruebaSuma() {
         // Arreglo los inputs
-        Mockito.when(Mockito.anyInt()).thenReturn(5, 3);
+        Mockito.when(Mockito.anyInt()).thenReturn(5, 6);
         // Ejecuto el método main
         Suma.main(new String[0]);
         // Assert
-        assertEquals(8, resultado);
+        assertEquals(11, resultado);
     }
 
-    // Atributo estático mockeado
-    private static int resultado;
+    // Se asume que el código bajo prueba es el siguiente:
+    // int resultado = num1 + num2;
+    private static int num1, num2, resultado;
 }
 ```
