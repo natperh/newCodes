@@ -1,0 +1,29 @@
+graph TD;
+
+start --> showMenu;
+showMenu --> getMenuOption [Obtener opción]
+getMenuOption --> | 1 | createRecord;
+                | 2 | readRecords;
+                | 3 | updateRecord;
+                | 4 | deleteRecord;
+                | 5 | stop;
+createRecord --> openFile
+openFile --> getInput [ID (4d)]
+getInput --> writeRecord
+writeRecord --> closeFile
+readRecords --> openFile
+readRecords --> readRecord
+readRecord --> displayRecord
+readRecord --> end?
+end? --> true : readRecord
+updateRecord --> openFile
+updateRecord --> getInput [ID actual]
+updateRecord --> readRecord
+updateRecord --> getInput [Nuevo nombre]
+updateRecord --> writeRecord
+deleteRecord --> openFile
+deleteRecord --> getInput [ID]
+deleteRecord --> deleteRecordFile
+stop --> end
+end --> closeFile
+closeFile --> start
