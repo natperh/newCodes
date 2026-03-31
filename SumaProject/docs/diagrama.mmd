@@ -20,10 +20,14 @@ class Validate abstract LogicCOBOL {
 }
 
 class BusinessLogic abstract LogicCOBOL {
-    procesamientoReglasNegocio()
-    procesamientoReglasNegocio() --> OutputData
+    procesamientodeReglasdeNegocio()
+    procesamientodeReglasdeNegocio() --> OutputData
 }
 
 class OutputData abstract OutputCOBOL {
     escrituradeResultados()
+}
+
+class Sumador extends InputData  extends Validate  extends BusinessLogic  extends OutputData {
+
 }
