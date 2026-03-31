@@ -1,9 +1,9 @@
 1. DESCRIPCIÓN GENERAL: El programa COBOL original pide al usuario tres números y los suma, mostrando el resultado en pantalla.
 
 2. REGLAS DE NEGOCIO:
-   - El programa valida que los números ingresados sean válidos (no nulos).
-   - Se suman los tres números y se guarda el resultado en una variable.
+   - Validar que los tres números sean válidos e iguales o mayores que cero.
+   - Sumar los tres números y almacenar el resultado en una variable.
 
 3. VARIABLES CRÍTICAS:
-   - NUM1, NUM2, NUM3: Almacenan los tres números enteros de entrada.
+   - NUM1, NUM2, NUM3: Almacenan los tres números a sumar.
    - RESULTADO: Almacena el resultado final de la suma.
