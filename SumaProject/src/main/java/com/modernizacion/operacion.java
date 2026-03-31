@@ -1,21 +1,22 @@
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class SumaApplication {
+public class ModernizacionCOBOLApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(SumaApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(ModernizacionCOBOLApplication.class, args);
+	}
+}
 
-    @RestController
-    class SumaController {
+@RestController
+class Controlador {
 
-        @GetMapping("/suma")
-        public int suma(int num1, int num2) {
-            return num1 + num2;
-        }
-    }
+	@PostMapping("/suma")
+	public String suma(@RequestParam(value = "num1") Integer num1, @RequestParam(value = "num2") Integer num2) {
+		return "El resultado es: " + (num1 + num2);
+	}
 }

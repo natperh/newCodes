@@ -1,16 +1,11 @@
-classDiagram
-    class SumaApplication {
-        +SpringBootApplication
-        *main(args)
-        <<include>> SpringApplication app
-        -run(app, args)
-    }
+graph TD
+  subgraph "User Input"
+  User((Usuario)) -->|Ingresa Números| Request((Suma API))
+  end
 
-    class SumaController {
-        +RestController
-        -suma(num1, num2) : int
-    }
+  subgraph "Business Process"
+  Request --> Logic[Suma Números]
+  Logic -->|Resultado| Response((Respuesta))
+  end
 
-    class SpringApplication {
-        -run(app, args)
-    }
+  Response --> User

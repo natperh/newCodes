@@ -1,9 +1,6 @@
 Feature: Suma de dos números
 
-Scenario: Sumar dos números positivos
-    Dado que tengo los siguientes números
-     | num1 | num2 |
-     |---- |---- |
-     | 2   | 3    |
-    Cuando llamo a la API de suma
-    Entonces el resultado debe ser 5
+ Escenario: Suma exitosa
+  Dado que ingreso los números 2 y 3
+  Cuando hago la petición de suma
+  Entonces el resultado debe ser "El resultado es: 5"
