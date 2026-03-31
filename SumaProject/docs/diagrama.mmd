@@ -1,21 +1,14 @@
 graph TD
-  subgraph "Business Process Model"
-    Start --> InputData
-    InputData --> Validate
-    Validate --> Error
-    Validate --> BusinessLogic
-    BusinessLogic --> WriteOutput
-    WriteOutput --> End
+  subgraph "API Rest"
+    id1(API Rest) -->|suma| id2(Controlador.suma)
+    click id1 "/suma"
   end
 
-subgraph "Código COBOL"
-  InputData((Lectura de Datos)) --> BPStart(Inicio)
-  BPEnd(Fin Proceso) -->| Continúa con el siguiente proceso | BusinessLogic
-end
-
-BPStart --> InputData
-Validate -- Fallo --> Error
-BusinessLogic -- Éxito --> BPEnd
-
-class BPStart label="Inicio|Lectura de Datos COBOL";
-class BPEnd label="Fin Proceso";
+  subgraph "Business Process Model (BPM)"
+    Start((Inicio)) --> Input[Obtener Datos Usuario]
+    Input --> Logic[Validar Entrada]
+    Logic -- "num1, num2 válidos" --> id2
+    Logic -- "Fallo" --> Error((Fin con Error))
+    id2 --> Output[Responder Resultado]
+    Output --> End((Fin Proceso))
+  end

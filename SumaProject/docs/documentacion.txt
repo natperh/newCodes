@@ -1,10 +1,12 @@
-1. DESCRIPCIÓN GENERAL: El programa COBOL original realiza el cálculo de la suma de dos números enteros.
+## Descripción General
+Este programa COBOL originalmete diseñado para sumar dos números y mostrar el resultado en pantalla. Funciona en un entorno de mainframe.
 
-2. REGLAS DE NEGOCIO:
-   - Lectura de dos números enteros del usuario.
-   - Validación de que los números hayan sido ingresados correctamente.
-   - Cálculo de la suma de los dos números.
+## Reglas de Negocio
+1. El programa pide dos números al usuario y los almacena en las variables NUM1 y NUM2.
+2. Suma el contenido de NUM1 y NUM2 y guarda el resultado en RESULTADO.
+3. Muestra el resultado final en pantalla.
 
-3. VARIABLES CRÍTICAS:
-   - NUM1, NUM2: Almacenan los dos números enteros a sumar.
-   - RESULTADO: Almacena el resultado final de la suma.
+## Variables Críticas
+- NUM1: Almacena el primer número ingresado por el usuario.
+- NUM2: Almacena el segundo número ingresado.
+- RESULTADO: Almacena el resultado final de la suma.

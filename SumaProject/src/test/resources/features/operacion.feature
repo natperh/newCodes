@@ -1,6 +1,13 @@
 Feature: Suma de dos números
 
-Scenario: Suma exitosa
-   | paso 1 | Se ingresa 5 como el primer número |
-   | paso 2 | Se ingresa 10 como el segundo número |
-   | paso 3 | Se obtiene la suma: 15 |
+  Escenario: Suma exitosa
+    Dado que ingreso el número "5"
+    y ingreso el número "3"
+    Cuando llamo a la API de suma
+    Entonces el resultado debe ser "El resultado es 8"
+
+  Escenario: Fallo de validación
+    Dado que ingreso un número negativo "5"
+    y ingreso "0"
+    Cuando llamo a la API de suma
+    Entonces el resultado debe ser "El resultado es 5"
