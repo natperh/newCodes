@@ -1,9 +1,15 @@
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-class TestDeNegocio {
+import static org.junit.jupiter.api.Assertions.*;
 
-	@Test
-	void suma() {
-		assertEquals("El resultado es: 5", new Controlador().suma(2, 3));
-	}
+class SumadorTest {
+
+    @Test
+    void sumaDosNumeros() {
+        Sumador sumador = new Sumador();
+        int num1 = 5;
+        int num2 = 10;
+        int resultadoEsperado = 15;
+        int resultadoReal = sumador.suma(num1, num2);
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
 }

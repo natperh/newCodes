@@ -1,11 +1,21 @@
 graph TD
-  subgraph "User Input"
-  User((Usuario)) -->|Ingresa Números| Request((Suma API))
+  subgraph "Business Process Model"
+    Start --> InputData
+    InputData --> Validate
+    Validate --> Error
+    Validate --> BusinessLogic
+    BusinessLogic --> WriteOutput
+    WriteOutput --> End
   end
 
-  subgraph "Business Process"
-  Request --> Logic[Suma Números]
-  Logic -->|Resultado| Response((Respuesta))
-  end
+subgraph "Código COBOL"
+  InputData((Lectura de Datos)) --> BPStart(Inicio)
+  BPEnd(Fin Proceso) -->| Continúa con el siguiente proceso | BusinessLogic
+end
 
-  Response --> User
+BPStart --> InputData
+Validate -- Fallo --> Error
+BusinessLogic -- Éxito --> BPEnd
+
+class BPStart label="Inicio|Lectura de Datos COBOL";
+class BPEnd label="Fin Proceso";

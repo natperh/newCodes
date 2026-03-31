@@ -1,6 +1,6 @@
 Feature: Suma de dos números
 
- Escenario: Suma exitosa
-  Dado que ingreso los números 2 y 3
-  Cuando hago la petición de suma
-  Entonces el resultado debe ser "El resultado es: 5"
+Scenario: Suma exitosa
+   | paso 1 | Se ingresa 5 como el primer número |
+   | paso 2 | Se ingresa 10 como el segundo número |
+   | paso 3 | Se obtiene la suma: 15 |
