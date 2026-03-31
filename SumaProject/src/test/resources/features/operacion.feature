@@ -1,10 +1,11 @@
 Feature: Suma de tres números
 
-Escenario: Suma exitosa
-   Dado que tengo los tres números
-   Cuando sumo los tres números
-   Entonces el resultado es la suma de ellos
+Escenario: Suma exitosa de tres números
+Dado que tengo los tres números
+Cuando los tres números son sumados
+Entonces el resultado debe ser la suma de los mismos
 
-Ejemplos:
-   | num1 | num2 | num3 | resultado |
-   | 10   | 20   | 30   | 60        |
+Escenario: Suma con un número nulo
+Dado que uno de los tres números es nulo
+Cuando los tres números son sumados
+Entonces se produce un error y se informa al usuario
