@@ -1,14 +1,29 @@
 graph TD
-  subgraph "API Rest"
-    id1(API Rest) -->|suma| id2(Controlador.suma)
-    click id1 "/suma"
+  subgraph "Business Process Model"
+    Start-->InputData
+    InputData-->Validate
+    Validate-->Error{Fallo}-->End
+    Validate-->BusinessLogic
+    BusinessLogic-->OutputData
+    OutputData-->End
   end
 
-  subgraph "Business Process Model (BPM)"
-    Start((Inicio)) --> Input[Obtener Datos Usuario]
-    Input --> Logic[Validar Entrada]
-    Logic -- "num1, num2 válidos" --> id2
-    Logic -- "Fallo" --> Error((Fin con Error))
-    id2 --> Output[Responder Resultado]
-    Output --> End((Fin Proceso))
-  end
+class InputData abstract InputCOBOL {
+    lecturadeDatos()
+    lecturadeDatos() --> Validate
+}
+
+class Validate abstract LogicCOBOL {
+    validaciondeReglas()
+    validaciondeReglas() --> BusinessLogic[Éxito]
+    validaciondeReglas() --> Error[Fallo]
+}
+
+class BusinessLogic abstract LogicCOBOL {
+    procesamientoReglasNegocio()
+    procesamientoReglasNegocio() --> OutputData
+}
+
+class OutputData abstract OutputCOBOL {
+    escrituradeResultados()
+}

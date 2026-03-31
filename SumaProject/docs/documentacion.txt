@@ -1,12 +1,9 @@
-## Descripción General
-Este programa COBOL originalmete diseñado para sumar dos números y mostrar el resultado en pantalla. Funciona en un entorno de mainframe.
+1. DESCRIPCIÓN GENERAL: El programa COBOL original realiza la suma de tres números enteros introducidos por el usuario y muestra el resultado.
 
-## Reglas de Negocio
-1. El programa pide dos números al usuario y los almacena en las variables NUM1 y NUM2.
-2. Suma el contenido de NUM1 y NUM2 y guarda el resultado en RESULTADO.
-3. Muestra el resultado final en pantalla.
+2. REGLAS DE NEGOCIO:
+   - El programa valida que los números introducidos sean válidos.
+   - Se realiza la suma de los tres números.
 
-## Variables Críticas
-- NUM1: Almacena el primer número ingresado por el usuario.
-- NUM2: Almacena el segundo número ingresado.
-- RESULTADO: Almacena el resultado final de la suma.
+3. VARIABLES CRÍTICAS:
+   - NUM1, NUM2, NUM3: Almacenan los tres números enteros introducidos por el usuario.
+   - RESULTADO: Almacena el resultado final de la suma.

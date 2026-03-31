@@ -1,13 +1,6 @@
-Feature: Suma de dos números
+Feature: Suma de tres números
 
-  Escenario: Suma exitosa
-    Dado que ingreso el número "5"
-    y ingreso el número "3"
-    Cuando llamo a la API de suma
-    Entonces el resultado debe ser "El resultado es 8"
-
-  Escenario: Fallo de validación
-    Dado que ingreso un número negativo "5"
-    y ingreso "0"
-    Cuando llamo a la API de suma
-    Entonces el resultado debe ser "El resultado es 5"
+Escenario: Suma exitosa
+   Dado que tengo los tres números
+   Cuando sumo los tres números
+   Entonces el resultado debe ser 60
