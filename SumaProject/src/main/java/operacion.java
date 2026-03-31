@@ -1,17 +1,21 @@
-//Suma.java
-package com.ejemplo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class Suma {
+public class SumaApplication {
 
-	public static int sumar(int num1, int num2) {
-		return num1 + num2;
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SumaApplication.class, args);
+    }
+}
 
-	public static void main(String[] args) {
-		int resultado = SpringApplication.run(Suma.class, args).getBean(Suma.class).sumar(10, 20);
-		System.out.println("El resultado es: " + resultado);
-	}
+@RestController
+class SumaController {
+
+    @GetMapping("/suma")
+    public int suma(int num1, int num2) {
+        return num1 + num2;
+    }
 }
