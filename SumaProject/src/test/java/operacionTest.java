@@ -1,14 +1,18 @@
-import org.junit.jupiter.api.Test;
+//SumaTest.java
+package com.ejemplo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-class SumaControllerTest {
+@SpringBootTest
+class SumaTest {
 
-    @Test
-    void suma_deberia_sumar_dos_numeros() {
-        int num1 = 5;
-        int num2 = 10;
-        int esperado = 15;
-        int resultado = new SumaController().suma(num1, num2);
-        assertEquals(esperado, resultado);
-    }
+	@Test
+	void sumar() {
+		int num1 = 10;
+		int num2 = 20;
+		int esperado = 30;
+		int resultado = new Suma().sumar(num1, num2);
+		assertEquals(esperado, resultado);
+	}
 }

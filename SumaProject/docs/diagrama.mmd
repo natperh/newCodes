@@ -1,9 +1,12 @@
 classDiagram
-    class SumaController {
-        +suma(num1, num2)
+    class Suma {
+        +int num1
+        +int num2
+        +int resultado
+
+        sumar() : int
     }
-    class CobolToJava21Application {
-        +main()
-    }
-    SumaController <|-- CobolToJava21Application
-    SumaController o-- SpringBootApplication
+
+    note right of Suma
+        SpringApplication.run() en el main()
+    end note

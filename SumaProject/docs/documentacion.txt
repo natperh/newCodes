@@ -7,10 +7,5 @@
 3. Diagrama Mermaid:
 
 
-4. Documentación explicativa:
-
-La aplicación COBOL original se ha transformedo en una aplicación Spring Boot moderna. La lógica de negocio se ha encapsulado en un controlador dedicado llamado `SumaController`. Este controlador expone un endpoint REST `/suma` que toma dos parámetros numéricos y devuelve su suma. 
-
-La aplicación principal, `CobolToJava21Application`, se encarga de iniciar el Spring Boot y se encuentra en el archivo `CobolToJava.java`. También se incluyen pruebas unitarias escritas con JUnit Jupiter para validar el comportamiento del método `suma`. 
-
-Para ejecutar la aplicación, simplemente ejecute el archivo jar con el comando `java -jar your-jar-name.jar`. La aplicación será accesible en el puerto predeterminado de Spring Boot (usualmente el 8080).
+4. Documentación:
+El código Java transforma el programa COBOL en una aplicación Spring Boot. La clase Suma contiene un método sumar() que suma dos números y devuelve el resultado. El método main() utiliza SpringApplication para iniciar la aplicación y obtener una instancia de Suma, luego llama al método sumar() con los argumentos 10 y 20, mostrando el resultado en pantalla. También se proporciona una prueba unitaria para verificar el método sumar().
