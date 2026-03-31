@@ -15,4 +15,4 @@ Las API expuestas son:
 
 Pruebas:
 - `TestContextManager` : Inicializa el contexto de Spring Boot.
-- `SumaControllerTest` : Prueba unitaria que verifica el cálculo de suma.
+- `SumaControllerTest` : Prueba unitaria que verifica el controlador de suma.
