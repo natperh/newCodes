@@ -1,8 +1,15 @@
 classDiagram
     class SumaApplication {
-        +suma(int, int) int
+        +SpringBootApplication
+        *main(String[])
+        +run(String[])
+        <<abstract>>
+        +SumaController controller
     }
-    class SumaTest {
-        -pruebaSuma()
+
+    class SumaController {
+        +RestController
+        +suma(int,int) : int
     }
-    SumaApplication o-- SumaTest
+
+    SumaApplication o--SumaController
