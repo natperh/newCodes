@@ -1,16 +1,33 @@
 graph TD
   subgraph "Business Process Model"
-    Start --> InputData
-    InputData --> Validate
-    Validate --> Error en caso de fallo
-    Validate --> BusinessLogic en caso de éxito
-    BusinessLogic --> OutputData
-    OutputData --> End
+    Start-->InputData
+    InputData-->Validate
+    Validate-->Error{Fallo}-->End
+    Validate-->BusinessLogic
+    BusinessLogic-->OutputData
+    OutputData-->End
   end
-  
-  subgraph "Código COBOL"
-  InputData((Lectura de Datos)) --> MainProgram
-  MainProgram --> AcceptNumbers[Aceptar 3 Números]
-  AcceptNumbers --> Logic[Lógica COBOL]
-  Logic --> DisplayResult
-  end
+
+class InputData abstract InputCOBOL {
+    lecturadeDatos()
+    lecturadeDatos() --> Validate
+}
+
+class Validate abstract LogicCOBOL {
+    validaciondeReglas()
+    validaciondeReglas() --> BusinessLogic[Éxito]
+    validaciondeReglas() --> Error[Fallo]
+}
+
+class BusinessLogic abstract LogicCOBOL {
+    procesamientodeReglasdeNegocio()
+    procesamientodeReglasdeNegocio() --> OutputData
+}
+
+class OutputData abstract OutputCOBOL {
+    escrituradeResultados()
+}
+
+class Sumador extends InputData  extends Validate  extends BusinessLogic  extends OutputData {
+
+}
