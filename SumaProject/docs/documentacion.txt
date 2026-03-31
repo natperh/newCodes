@@ -6,9 +6,13 @@ Para ejecutar la aplicación:
 1. Asegúrate de tener Java 17 o superior y Spring Boot 3 instalado.
 2. Ejecuta el comando `java -jar your-jar-name.jar`
 
-Para desplegar la aplicación en un servidor:
-1. Crea un archivo application.properties en el mismo directorio que el jar y configura tu servidor.
-2. Ejecuta el comando `java -jar --spring.config.location=application.properties your-jar-name.jar`
+Para desplegar las API en local:
+1. Ejecuta `spring-boot:run` en un IDE compatible con Spring Boot.
+2. Accede a las API en http://localhost:8080
 
-API Rest:
-* GET /suma?num1={int}&num2={int} : Devuelve la suma de dos números.
+Las API expuestas son:
+- `GET /suma?num1={num1}&num2={num2}` : Suma dos números y devuelve el resultado.
+
+Pruebas:
+- `TestContextManager` : Inicializa el contexto de Spring Boot.
+- `SumaControllerTest` : Prueba unitaria que verifica el cálculo de suma.
