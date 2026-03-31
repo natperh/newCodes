@@ -9,25 +9,22 @@ graph TD
   end
 
 class InputData abstract InputCOBOL {
-    lecturadeDatos()
-    lecturadeDatos() --> Validate
+    Lectura de Datos COBOL
 }
 
-class Validate abstract LogicCOBOL {
-    validaciondeReglas()
-    validaciondeReglas() --> BusinessLogic[Éxito]
-    validaciondeReglas() --> Error[Fallo]
+class Validate abstract ValidateCOBOL {
+    Validación de Reglas
 }
 
-class BusinessLogic abstract LogicCOBOL {
-    procesamientodeReglasdeNegocio()
-    procesamientodeReglasdeNegocio() --> OutputData
+class BusinessLogic abstract BusinessLogicCOBOL {
+    Procesamiento de Reglas de Negocio
 }
 
 class OutputData abstract OutputCOBOL {
-    escrituradeResultados()
+    Escritura/Salida de Resultados
 }
 
-class Sumador extends InputData  extends Validate  extends BusinessLogic  extends OutputData {
-
-}
+InputCOBOL -.->ModernizacionCOBOLApplication: Lectura de datos en Java
+ValidateCOBOL -.->SumadorTest: Pruebas de validación
+BusinessLogicCOBOL -.->ModernizacionCOBOLApplication: Lógica de Negocio en Java
+OutputCOBOL -.->System.out: Salida final
