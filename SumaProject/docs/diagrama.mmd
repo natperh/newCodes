@@ -1,17 +1,8 @@
 classDiagram
     class SumaApplication {
-        <<SpringBootApplication>>
-        main()
-        +run()
+        +suma(int, int) int
     }
-
-    class SumaController {
-        <<RestController>>
-        suma(int, int) returns int
+    class SumaTest {
+        -pruebaSuma()
     }
-
-    SumaApplication o-- SumaController : @RestController
-
-    class SpringApplication {
-        +run(Class)
-    }
+    SumaApplication o-- SumaTest

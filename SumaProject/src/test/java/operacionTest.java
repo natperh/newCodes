@@ -1,15 +1,12 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.springframework.boot.test.context.SpringBootTest;
-import suma.SumaController;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class SumaControllerTest {
+public class SumaTest {
 
     @Test
-    void cuandoSeSumanDosNumeros() {
-        SumaController controller = new SumaController();
-        int result = controller.suma(3, 5);
-        assertEquals(8, result);
+    public void pruebaSuma() {
+        SumaApplication app = new SumaApplication();
+        int result = app.suma(2, 3);
+        assertEquals(5, result);
     }
 }
