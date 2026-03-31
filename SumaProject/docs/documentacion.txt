@@ -9,6 +9,10 @@
 
 4. Documentación explicativa:
 
-La aplicación COBOL original se transforma en una aplicación Spring Boot moderna. El código Java utiliza Spring Boot para crear un API REST que suma dos números enteros. Se ha creado un controlador para manejar la solicitud GET y devolver el resultado. También se ha incluido una prueba unitaria para validar la función de suma. El diagrama de clases Mermaid muestra la relación entre las clases principales de la aplicación transformed.
+La aplicación COBOL original se transforma en una aplicación Spring Boot moderna. El programa COBOL realiza una suma simple de dos números y muestra el resultado. La nueva aplicación Java utiliza Spring Boot para crear un API REST que también suma dos números enteros y devuelve el resultado.
 
-El código está diseñado para ser sencillo y directo, con un enfoque en la funcionalidad requerida. Se pueden agregar más características y funcionalidades según sea necesario.
+Para lograr esto, se ha creado una clase SumaApplication que contiene el punto de entrada principal de la aplicación y configura el entorno Spring Boot. Dentro de esta clase, se ha inyectado un controlador REST llamado SumaController, el cual expone un endpoint `/suma` que acepta dos parámetros numéricos y devuelve su suma.
+
+Las pruebas unitarias se han diseñado para verificar el comportamiento del controlador, asegurando que la operación de suma funcione correctamente.
+
+Esta transformación permite que el código sea más modular, escalable y fácil de mantener. Además, al utilizar Spring Boot, la aplicación se beneficia de muchas funcionalidades y tecnologías modernas para su despliegue y operación.
