@@ -1,9 +1,30 @@
 graph TD
   subgraph "Business Process Model"
-    Start --> InputData
-    InputData --> Validate
-    Validate --> Error
-    Validate(ok) --> BusinessLogic
-    BusinessLogic --> OutputResults
-    OutputResults --> End
+    Start-->InputData
+    InputData-->Validate
+    Validate-->Error{Fallo}-->End
+    Validate-->BusinessLogic
+    BusinessLogic-->OutputData
+    OutputData-->End
   end
+
+class InputData abstract InputCOBOL {
+    Lectura de Datos COBOL
+}
+
+class Validate abstract ValidateCOBOL {
+    Validación de Reglas
+}
+
+class BusinessLogic abstract BusinessLogicCOBOL {
+    Procesamiento de Reglas de Negocio
+}
+
+class OutputData abstract OutputCOBOL {
+    Escritura/Salida de Resultados
+}
+
+InputCOBOL -.->ModernizacionCOBOLApplication: Lectura de datos en Java
+ValidateCOBOL -.->SumadorTest: Pruebas de validación
+BusinessLogicCOBOL -.->ModernizacionCOBOLApplication: Lógica de Negocio en Java
+OutputCOBOL -.->System.out: Salida final
