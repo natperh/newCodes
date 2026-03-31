@@ -9,7 +9,7 @@ class SumaControllerTest {
     @Test
     void cuandoSeSumanDosNumeros() {
         SumaController controller = new SumaController();
-        int result = controller.suma(3, 5);
-        assertEquals(8, result);
+        int result = controller.suma(10, 20);
+        assertEquals(30, result);
     }
 }
