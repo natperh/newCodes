@@ -1,9 +1,9 @@
-1. DESCRIPCIÓN GENERAL: El programa COBOL original pide al usuario tres números y los suma, mostrando el resultado en pantalla.
+1. DESCRIPCIÓN GENERAL: El programa COBOL original realiza el cálculo de la suma de tres números enteros introducidos por el usuario.
 
 2. REGLAS DE NEGOCIO:
-   - El programa valida que los números introducidos sean válidos.
-   - Se suman los tres números almacenados en NUM1, NUM2 y NUM3 y se guarda el resultado en RESULTADO.
+   - Validar que los tres números sean válidos y están presentes.
+   - Calcular la suma de los tres números.
 
 3. VARIABLES CRÍTICAS:
-   - NUM1, NUM2, NUM3: Almacenan los tres números a sumar.
-   - RESULTADO: Muestra el resultado final de la suma.
+   - NUM1, NUM2, NUM3: Almacenan los tres números enteros introducidos por el usuario.
+   - RESULTADO: Almacena el resultado final de la suma.
