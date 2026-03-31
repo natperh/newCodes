@@ -13,10 +13,10 @@ class SumaApplicationTests {
     }
 
     @Test
-    void testSuma() {
-        int num1 = 5;
-        int num2 = 10;
-        int esperado = 15;
+    void suma_cuandoSeSumanDosNumeros() {
+        int num1 = 2;
+        int num2 = 3;
+        int esperado = 5;
         int resultado = new SumaApplication().suma(num1, num2);
         assertEquals(esperado, resultado);
     }

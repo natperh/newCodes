@@ -1,12 +1,14 @@
 Suma de dos números
 
-La aplicación toma dos números enteros y los suma, devolviendo el resultado.
+La aplicación suma dos números enteros y devuelve el resultado.
 
 Para ejecutar la aplicación:
-$ java -jar suma.jar
+1. Asegúrate de tener Java 17 o superior y Spring Boot 3 instalado.
+2. Ejecuta el comando `java -jar your-jar-name.jar`
 
-Para ejecutar las pruebas:
-$ mvn test
+Para desplegar la aplicación en un servidor:
+1. Crea un archivo application.properties en el mismo directorio que el jar y configura tu servidor.
+2. Ejecuta el comando `java -jar --spring.config.location=application.properties your-jar-name.jar`
 
-API REST:
-GET /suma?num1={int}&num2={int} : Devuelve la suma de num1 y num2
+API Rest:
+* GET /suma?num1={int}&num2={int} : Devuelve la suma de dos números.
