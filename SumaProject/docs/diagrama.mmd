@@ -1,9 +1,7 @@
 graph TD
-  subgraph "Business Process Model"
-    Start --> InputData
-    InputData --> Validate
-    Validate --> Error on fail
-    Validate --> BusinessLogic
-    BusinessLogic --> OutputResults
-    OutputResults --> End
+  subgraph "Modelo de Proceso de Negocios"
+    Start --> Input[Ingresar dos números]
+    Input --> Logic[Validar y calcular]
+    Logic --> Output[Mostrar resultado]
+    Output --> End
   end
