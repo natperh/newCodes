@@ -2,8 +2,8 @@ graph TD
   subgraph "Business Process Model"
     Start --> InputData
     InputData --> Validate
-    Validate --> Error processing
+    Validate --> Error on fail
     Validate --> BusinessLogic
-    BusinessLogic --> OutputResult
-    OutputResult --> End
+    BusinessLogic --> OutputResults
+    OutputResults --> End
   end

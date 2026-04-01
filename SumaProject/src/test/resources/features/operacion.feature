@@ -1,7 +1,10 @@
 Feature: Suma de dos números
 
-Escenario: Suma exitosa
-   Dado que ingreso el primer número 10
-   Y ingreso el segundo número 20
-   Cuando llamo a la función de suma
-   Entonces el resultado debe ser 30
+ Scenario: Suma exitosa
+   Dado que tengo los dos números
+   Cuando sumo los dos números
+   Entonces el resultado es la suma de ambos
+
+ Examples:
+   | num1 | num2 |
+   | 10   | 20   |
