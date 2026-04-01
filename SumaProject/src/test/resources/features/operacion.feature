@@ -1,10 +1,10 @@
 Feature: Suma de dos números
 
- Scenario: Suma exitosa
-   Dado que tengo los dos números
-   Cuando sumo los dos números
-   Entonces el resultado es la suma de ambos
+Escenario: Suma exitosa
+Dado que tengo dos números
+Cuando los sumo
+Entonces el resultado es correcto
 
- Examples:
-   | num1 | num2 |
-   | 10   | 20   |
+Ejemplos:
+| num1 | num2 |
+| 3 | 4 |
