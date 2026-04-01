@@ -1,9 +1,9 @@
-1. El programa original en el Mainframe realiza una suma simple de dos números y muestra el resultado.
+1. DESCRIPCIÓN GENERAL: El programa original en COBOL pide dos números al usuario y muestra su suma.
 
-2. Reglas de Negocio:
-   - Validar que los números ingresados sean válidos (por ejemplo, que no sean negativos).
-   - Realizar la operación de suma.
+2. REGLAS DE NEGOCIO:
+   - Validar que los números introducidos sean válidos.
+   - Sumar los dos números y almacenar el resultado.
 
-3. Variables Críticas:
-   - num1, num2: Almacenan los dos números que se van a sumar.
+3. VARIABLES CRÍTICAS:
+   - num1, num2: Almacenan los dos números a sumar.
    - resultado: Muestra el resultado final de la suma.
