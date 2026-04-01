@@ -1,7 +1,6 @@
 Feature: Suma de dos números
 
-Escenario: Suma exitosa
-   Dado que ingreso el primer número 10
-   Y ingreso el segundo número 20
-   Cuando llamo a la función de suma
-   Entonces el resultado debe ser 30
+Escenario: Sumar dos números enteros
+  Dado que tengo los dos números: 5 y 10
+  Cuando los sumo
+  Entonces el resultado debe ser 15
