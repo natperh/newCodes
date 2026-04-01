@@ -1,18 +1,9 @@
 graph TD
-  subgraph "User Input"
-  ID1(Introduce el primer número) -->|num1| IN1(5);
-  ID2(Introduce el segundo número) -->|num2| IN2(10);
-  end
-
-  subgraph "Business Logic"
-  B1(Sumar) -->|input| IN1,IN2;
-  B1 -->|output| R;
-  end
-
-  subgraph "Output"
-  R -->|resultado| O1(El resultado es 15);
-  end
-
-  IN1 --> B1;
-  IN2 --> B1;
-  R --> O1;
+    subgraph "Flujo de Negocio"
+        id(Start) --> LecturaDatos
+        LecturaDatos --> Validacion
+        Validacion -->| Fallo | Error
+        Validacion -->| Éxito | Sumar
+        Sumar --> EscribirDatos
+        id(End)
+    end
