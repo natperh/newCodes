@@ -1,9 +1,11 @@
-1. DESCRIPCIÓN GENERAL: El programa original en COBOL lee dos números y los suma, mostrando el resultado en pantalla.
+1. DESCRIPCIÓN GENERAL: El programa original en COBOL pide al usuario dos números y los suma, mostrando el resultado en pantalla.
 
 2. REGLAS DE NEGOCIO:
-   - Validar que los números ingresados sean numéricos y válidos.
-   - Realizar la suma de los dos números.
+
+- Validar que los números introducidos sean válidos.
+- Realizar la suma de los dos números.
 
 3. VARIABLES CRÍTICAS:
-   - NUM1, NUM2: Almacenan los dos números a sumar.
-   - RESULTADO: Almacena el resultado final de la suma.
+
+- num1 y num2: Almacenan los dos números a sumar, de 4 dígitos cada uno.
+- resultado: Almacena el resultado final de la suma, con 5 dígitos.
