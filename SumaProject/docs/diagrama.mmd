@@ -1,9 +1,9 @@
 graph TD
-  subgraph "Business Process Model"
-    Start --> InputData
-    InputData --> Validate
-    Validate --> Error processing
-    Validate --> BusinessLogic
-    BusinessLogic --> OutputResult
-    OutputResult --> End
-  end
+    subgraph "Flujo de Negocio"
+        id(Start) --> LecturaDatos
+        LecturaDatos --> Validacion
+        Validacion -->| Fallo | Error
+        Validacion -->| Éxito | Sumar
+        Sumar --> EscribirDatos
+        id(End)
+    end
