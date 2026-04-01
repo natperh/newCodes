@@ -1,9 +1,12 @@
 graph TD
-  subgraph "Flujo de Negocio"
-    Start((Inicio)) --> Input((Ingreso de Datos))
-    Input --> Validation((Validación))
-    Validation -- Ok --> BusinessLogic((Lógica de Negocio))
-    BusinessLogic --> Output((Salida de Resultados))
-    Output --> End((Fin))
-    Validation -- Fail --> Error((Error))
+  subgraph "Flow del Programa"
+    id1(Inicio) -->|Solicitar input| id2(Input);
+    id2 -->|Validar| id3(Logic);
+    id3 -->|Fallo| id4(Error);
+    id3 -->|OK| id5(Calc);
+    id5 -->|Procesar| id6(Output);
+    id6 -->|Mostrar Resultado| id7(End);
   end
+
+classDiagram
+  ModernizacionCOBOLApplication <--> ApplicationContext

@@ -1,15 +1,19 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SumadorTest {
+class SumaTest {
 
     @Test
-    public void sumarDosNumeros() {
-        Sumador sumador = new Sumador();
+    void sumaDosNumeros() {
+        // Arrange
         int num1 = 5;
         int num2 = 10;
-        int resultadoEsperado = 15;
-        int resultadoReal = sumador.sumar(num1, num2);
-        assertEquals(resultadoEsperado, resultadoReal);
+        int esperado = 15;
+
+        // Act
+        int resultado = ModernizacionCOBOLApplication.suma(num1, num2);
+
+        // Assert
+        assertEquals(esperado, resultado);
     }
 }

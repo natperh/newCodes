@@ -1,10 +1,8 @@
 Feature: Suma de dos números
 
-Escenario: Suma exitosa
-Dado que tengo dos números
-Cuando los sumo
-Entonces el resultado es correcto
-
-Ejemplos:
-| num1 | num2 |
-| 3 | 4 |
+Scenario: Suma exitosa
+   | pasos    |
+   | Introducir 5 como el primer número |
+   | Introducir 10 como el segundo número |
+   | Realizar la suma             |
+   | Verificar que el resultado es 15   |
