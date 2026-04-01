@@ -2,20 +2,8 @@ graph TD
   subgraph "Business Process Model"
     Start --> InputData
     InputData --> Validate
-    Validate --> Error en Validacion
-    Validate --> ProcesarReglas
-    ProcesarReglas --> EscribirResultados
-    EscribirResultados --> Finalizar
-    class InputData {
-        Lectura de Datos COBOL
-    }
-    class Validate {
-        Validación de Reglas
-    }
-    class ProcesarReglas {
-        Procesamiento de Reglas de Negocio
-    }
-    class EscribirResultados {
-        Escritura/Salida de Resultados
-    }
-  End --> Finalizar
+    Validate --> Error processing
+    Validate --> BusinessLogic
+    BusinessLogic --> OutputResult
+    OutputResult --> End
+  end
