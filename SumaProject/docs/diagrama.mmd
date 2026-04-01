@@ -1,7 +1,9 @@
 graph TD
-  subgraph "Modelo de Proceso de Negocios"
-    Start --> Input[Ingresar dos números]
-    Input --> Logic[Validar y calcular]
-    Logic --> Output[Mostrar resultado]
-    Output --> End
+  subgraph "Flujo de Negocio"
+    Start((Inicio)) --> Input((Ingreso de Datos))
+    Input --> Validation((Validación))
+    Validation -- Ok --> BusinessLogic((Lógica de Negocio))
+    BusinessLogic --> Output((Salida de Resultados))
+    Output --> End((Fin))
+    Validation -- Fail --> Error((Error))
   end
