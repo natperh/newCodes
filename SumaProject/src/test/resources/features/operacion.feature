@@ -1,6 +1,6 @@
 Feature: Suma de dos números
 
-Scenario: Suma exitosa
+ Scenario: Suma exitosa
    Dado que tengo los dos números
    Cuando sumo los dos números
-   Entonces el resultado es 30
+   Entonces el resultado debe ser 30
