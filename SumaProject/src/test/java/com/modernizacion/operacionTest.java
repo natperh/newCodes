@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SumadorTest {
 
     @Test
-    public void sumaDosNumeros() {
+    public void sumar_dos_numeros() {
         Sumador sumador = new Sumador();
-        int resultado = sumador.suma(10, 20);
+        int resultado = sumador.sumar(10, 20);
         assertEquals(30, resultado);
     }
 }
