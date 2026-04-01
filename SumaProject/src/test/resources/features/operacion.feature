@@ -1,6 +1,7 @@
-Feature: Suma de tres números
+Feature: Suma de dos números
 
 Escenario: Suma exitosa
-   Dado que tengo los tres números
-   Cuando sumo los tres números
-   Entonces el resultado debe ser 60
+   Dado que ingreso el primer número 10
+   Y ingreso el segundo número 20
+   Cuando llamo a la función de suma
+   Entonces el resultado debe ser 30
