@@ -1,9 +1,20 @@
 graph TD
-    subgraph "Flujo de Negocio"
-        id(Start) --> LecturaDatos
-        LecturaDatos --> Validacion
-        Validacion -->| Fallo | Error
-        Validacion -->| Éxito | Sumar
-        Sumar --> EscribirDatos
-        id(End)
-    end
+  subgraph "User Input"
+  id1(Introduce num1) -->|COBOL| id2(Lectura num1)
+  id3(Introduce num2) -->|COBOL| id4(Lectura num2)
+  end
+
+  id2 -->|Business Logic| id5(Valida inputs)
+  id4 -->|Business Logic| id5
+
+  id5 -->|Falló| id6(Error)
+  id5 -->|Éxito| id7(Calcular suma)
+
+  id7 -->|Output| id8(Mostrar resultado)
+  id8 --> id9(Fin)
+
+  subgraph "Java Modernization"
+  id10(Main Method) -->|Spring Boot| id11(SumadorApp)
+  id11 -->|Clean Arch.| id12(SumadorController)
+  id12 -->|Business Logic| Sumador
+  end

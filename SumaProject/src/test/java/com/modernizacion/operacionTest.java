@@ -4,12 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SumadorTest {
 
     @Test
-    public void sumarDosNumeros() {
+    public void sumar_dos_numeros() {
         Sumador sumador = new Sumador();
-        int num1 = 5;
-        int num2 = 10;
-        int resultadoEsperado = 15;
-        int resultadoReal = sumador.sumar(num1, num2);
-        assertEquals(resultadoEsperado, resultadoReal);
+        int resultado = sumador.sumar(10, 20);
+        assertEquals(30, resultado);
     }
 }
