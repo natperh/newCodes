@@ -1,10 +1,6 @@
 Feature: Suma de dos números
 
- Scenario: Suma exitosa
-   Dado que tengo los dos números
-   Cuando sumo los dos números
-   Entonces el resultado es la suma de ambos
-
- Examples:
-   | num1 | num2 |
-   | 10   | 20   |
+Escenario: Sumar dos números enteros
+  Dado que tengo los dos números: 5 y 10
+  Cuando los sumo
+  Entonces el resultado debe ser 15
