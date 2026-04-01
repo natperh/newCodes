@@ -1,12 +1,7 @@
 graph TD
-  subgraph "Flow del Programa"
-    id1(Inicio) -->|Solicitar input| id2(Input);
-    id2 -->|Validar| id3(Logic);
-    id3 -->|Fallo| id4(Error);
-    id3 -->|OK| id5(Calc);
-    id5 -->|Procesar| id6(Output);
-    id6 -->|Mostrar Resultado| id7(End);
+  subgraph "Modelo de Proceso de Negocios"
+    Start --> Input[Ingresar dos números]
+    Input --> Logic[Validar y calcular]
+    Logic --> Output[Mostrar resultado]
+    Output --> End
   end
-
-classDiagram
-  ModernizacionCOBOLApplication <--> ApplicationContext

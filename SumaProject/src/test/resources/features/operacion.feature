@@ -1,8 +1,6 @@
 Feature: Suma de dos números
 
-Scenario: Suma exitosa
-   | pasos    |
-   | Introducir 5 como el primer número |
-   | Introducir 10 como el segundo número |
-   | Realizar la suma             |
-   | Verificar que el resultado es 15   |
+Escenario: Sumar dos números enteros
+  Dado que tengo los dos números: 5 y 10
+  Cuando los sumo
+  Entonces el resultado debe ser 15
