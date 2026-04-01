@@ -1,15 +1,7 @@
 graph TD
-    subgraph "User Input"
-        A(Introduce el primer número) --> B(Num1);
-        B --> C(Introduce el segundo número);
-        C --> D(Lógica de Validación);
-    end
-    subgraph "Business Logic"
-        D(Lógica de Validación) -->|OK| E(Proceso de Suma);
-        D(Lógica de Validación) -->|Error| F((Fin con error));
-        E --> G(Resultado = Num1 + Num2);
-    end
-    G --> H(Mostrar resultado);
-    subgraph "Output"
-        H --> I(Fin del proceso);
-    end
+  subgraph "Modelo de Proceso de Negocios"
+    Start --> Input[Ingresar dos números]
+    Input --> Logic[Validar y calcular]
+    Logic --> Output[Mostrar resultado]
+    Output --> End
+  end
