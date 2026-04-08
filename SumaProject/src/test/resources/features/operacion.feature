@@ -1,11 +1,5 @@
-Feature: Suma de dos números en el sistema
+Feature: Suma de dos números
 
-  Escenario: Suma exitosa de dos números
-  Dado que ingreso el primer número "2"
-  Y ingreso el segundo número "3"
-  Entonces el resultado debe ser "5"
-
-  Ejemplos:
-  | primer numero | segundo numero |
-  |----|----|
-  | 2 | 3 |
+Scenario: Suma exitosa
+   | num1 | num2 | resultado esperada |
+   |  5   |  10  |         15        |
