@@ -6,16 +6,3 @@ graph TD
     Sum --> DisplayResult[Mostrar resultado]
     DisplayResult --> End
   end
-
-  subgraph "Business Process Model (BPM)"
-    Start((Inicio)) --> Input[Lectura de Datos]
-    Input --> Validation[(Valida que los datos ingresados son válidos)]
-    Validation -- Ok --> Calcu[Envío a cálculo]
-    Calcu --> Calculadora[Lógica de Negocio - Calculadora]
-    Calculadora --> Output[Escritura/Salida de Resultados]
-    Output --> End((Fin Proceso))
-  end
-
-  class Calculadora{
-    +sumar(num1: int, num2: int) : int
-  }
