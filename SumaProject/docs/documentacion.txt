@@ -1,9 +1,0 @@
-1. El programa original pide dos números al usuario y los suma, mostrando el resultado en pantalla.
-
-2. Reglas de Negocio:
-   - El programa valida que los números introducidos sean válidos (por ejemplo, que no sean nulos).
-   - Realiza la operación de suma de dos números enteros.
-
-3. Variables Críticas:
-   - num1 y num2: Almacenan los dos números que se van a sumar.
-   - resultado: Guarda el resultado final de la suma.
