@@ -1,9 +1,15 @@
 graph TD
-  subgraph "Business Process Model"
-    Start --> InputData
-    InputData --> Validate
-    Validate --> ErrorEnd
-    Validate --> BusinessLogic
-    BusinessLogic --> OutputResults
-    OutputResults --> End
-  end
+  subgraph "Modelo de Negocio"
+  A(Inicio) --> B(Ingreso Num1)
+  B --> C(Ingreso Num2)
+  C --> D(Lógica de Negocio)
+  D --> E(Proceso de Suma)
+  E --> F(Mostrar Resultado)
+  F --> G(Fin)
+  class A palegreen
+  class B palegreen
+  class C palegreen
+  class D darkorange
+  class E darkorange
+  class F palegreen
+  class G palegreen

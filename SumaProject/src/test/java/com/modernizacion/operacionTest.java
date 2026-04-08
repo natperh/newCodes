@@ -1,15 +1,17 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class SumadorTest {
+class TestDeServicio {
 
     @Test
-    void sumaDosNumeros() {
-        Sumador sumador = new Sumador();
-        int num1 = 5;
-        int num2 = 10;
-        int resultadoEsperado = 15;
-        int resultadoReal = sumador.suma(num1, num2);
+    void operar_debe_retornar_la_suma_de_dos_numeros() {
+        // Arreglo la inyección de dependencias
+        ServicioNegocio servicio = new ServicioNegocio(new CalculadoraImplementacion());
+
+        ModeloDominio modelo = new ModeloDominio(2, 3);
+        int resultadoEsperado = 5;
+        int resultadoReal = servicio.operar(modelo);
+
         assertEquals(resultadoEsperado, resultadoReal);
     }
 }
