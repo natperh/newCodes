@@ -1,22 +1,9 @@
 graph TD
-    subgraph "Modelo de Negocio"
-    C1(Captura de Números) -->| Núm1, Núm2 | V1(Validación de Entrada)
-    V1 --> V2(Regla Negocio: Suma)
-    V2 -->| Resultado | M1(Mostrar Resultado)
-    end
-
-    subgraph "Modernización COBOL"
-    classDef aplicacion fill:#FF9900,stroke:#000000,color:#FF9900
-    classDef servicio fill:#99FF99,stroke:#000000,color:#99FF99
-    classDef dominio fill:#FFFF99,stroke:#000000,color:#FFFF99
-    aplicacion0(/Moderna COBOL App/) --> servicio0(Servicio Negocio <br/> <font color='blue'>@Bean</font>)
-    servicio0 --> dominio0(Modelo Dominio)
-    class aplicacion0 servicio0 dominio0
-
-    subgraph "COBOL Legacy"
-    COBOL((COBOL <br/> Legacy)) --> V3(Lectura de Datos)
-    V3 --> A1(Main COBOL <br/> Procedimiento)
-    end
-
-    V1 -->| <font color='red'>Num1, Num2</font>| A1
-    A1 --> V2
+  subgraph "Business Process Model"
+    Start --> InputData
+    InputData --> Validate
+    Validate --> ErrorEnd
+    Validate --> BusinessLogic
+    BusinessLogic --> OutputResults
+    OutputResults --> EndProcess
+  end

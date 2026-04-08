@@ -1,19 +1,15 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
-class ServicioNegocioTest {
-
-    @Autowired
-    private ServicioNegocio servicio;
+class SumadorTest {
 
     @Test
-    void cuandoSeSumanDosNumeros() {
-        ModeloDominio modelo = new ModeloDominio(2, 3);
-        int esperado = 5;
-        int resultado = servicio.operar(modelo);
-        assertEquals(esperado, resultado);
+    void sumaDosNumeros() {
+        Sumador sumador = new Sumador();
+        int num1 = 5;
+        int num2 = 10;
+        int resultadoEsperado = 15;
+        int resultadoReal = sumador.suma(num1, num2);
+        assertEquals(resultadoEsperado, resultadoReal);
     }
 }
