@@ -1,15 +1,9 @@
 graph TD
-  subgraph "User Interface"
-  UI(UI) -->|input| BP
-
-  subgraph "Business Process"
-  BP(Proceso de Negocio) -->|nums| Calc
-
-  Calc(Cálculos) -->|result| UI
-
-  end
-
-  subgraph "COBOL Legacy"
-  nums = [1,2,3,4,5]
-  Calc = 1+2+3+4+5
+  subgraph "Flow del Programa"
+    Start --> InputNum1[Ingreso del primer número]
+    InputNum1 --> Validation[Validación de entrada]
+    Validation -- Ok --> Sum[Suma de números]
+    Sum --> DisplayResult[Mostrar resultado]
+    Validation -- Error --> Error
+    DisplayResult --> End
   end
