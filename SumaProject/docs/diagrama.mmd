@@ -1,14 +1,21 @@
 graph TD
-  subgraph "Business Process Model"
-    Start --> InputData
-    InputData --> Validate
-    Validate --> Error en datos
-    Validate --> ProcesoOK
-
-    ProcesoOK --> Sumar
-    Sumar --> ResultadoOK
-    ResultadoOK --> Terminar
-
-    Error en datos --> Error
-    Terminar --> Reiniciar
+  subgraph "Flow del Programa"
+    Start --> InputNum1[Ingreso del primer número]
+    InputNum1 --> Validation[Validación de entrada]
+    Validation -- Ok --> Sum[Suma de números]
+    Sum --> DisplayResult[Mostrar resultado]
+    DisplayResult --> End
   end
+
+  subgraph "Business Process Model (BPM)"
+    Start((Inicio)) --> Input[Lectura de Datos]
+    Input --> Validation[(Valida que los datos ingresados son válidos)]
+    Validation -- Ok --> Calcu[Envío a cálculo]
+    Calcu --> Calculadora[Lógica de Negocio - Calculadora]
+    Calculadora --> Output[Escritura/Salida de Resultados]
+    Output --> End((Fin Proceso))
+  end
+
+  class Calculadora{
+    +sumar(num1: int, num2: int) : int
+  }
