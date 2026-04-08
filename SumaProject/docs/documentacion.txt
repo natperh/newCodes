@@ -1,0 +1,9 @@
+1. El programa original en el Mainframe realiza la suma de dos números y muestra el resultado en pantalla.
+
+2. Reglas de Negocio:
+   - Validar que los números ingresados sean válidos antes de realizar la suma.
+   - Realizar la operación de suma.
+
+3. Variables Críticas:
+   - num1 y num2: Guardan los dos números a sumar.
+   - resultado: Almacena el resultado final de la suma.
