@@ -1,14 +1,15 @@
 graph TD
-  subgraph "Business Process Model"
-    Start --> InputData
-    InputData --> Validate
-    Validate --> Error en datos
-    Validate --> ProcesoOK
+  subgraph "User Interface"
+  UI(UI) -->|input| BP
 
-    ProcesoOK --> Sumar
-    Sumar --> ResultadoOK
-    ResultadoOK --> Terminar
+  subgraph "Business Process"
+  BP(Proceso de Negocio) -->|nums| Calc
 
-    Error en datos --> Error
-    Terminar --> Reiniciar
+  Calc(Cálculos) -->|result| UI
+
+  end
+
+  subgraph "COBOL Legacy"
+  nums = [1,2,3,4,5]
+  Calc = 1+2+3+4+5
   end

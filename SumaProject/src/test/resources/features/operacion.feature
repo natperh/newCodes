@@ -1,5 +1,9 @@
 Feature: Suma de dos números
 
-Scenario: Suma exitosa
+  Escenario: Suma exitosa
    | num1 | num2 | resultado esperada |
-   |  5   |  10  |         15        |
+   |  2   |  3   |        5         |
+
+   Ejemplos:
+   | num1 | num2 |
+   |  5   |  7   |
