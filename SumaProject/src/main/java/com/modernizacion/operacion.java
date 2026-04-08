@@ -3,10 +3,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class ModernizacionCOBOLApplication {
+public class ModernizacionCobolApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ModernizacionCOBOLApplication.class, args);
+        SpringApplication.run(ModernizacionCobolApplication.class, args);
     }
 
     @Bean
@@ -15,27 +15,14 @@ public class ModernizacionCOBOLApplication {
     }
 }
 
-class ModuloNegocio {
-
-    private Calculadora calculadora;
-
-    public ModuloNegocio(Calculadora calculadora) {
-        this.calculadora = calculadora;
-    }
-
-    public int suma(int num1, int num2) {
-        return calculadora.suma(num1, num2);
-    }
+public interface Calculadora {
+    int sumar(int num1, int num2);
 }
 
-interface Calculadora {
-    int suma(int num1, int num2);
-}
-
-class CalculadoraImplementacion implements Calculadora {
+public class CalculadoraImplementacion implements Calculadora {
 
     @Override
-    public int suma(int num1, int num2) {
+    public int sumar(int num1, int num2) {
         return num1 + num2;
     }
 }

@@ -1,15 +1,19 @@
 graph TD
-  subgraph "User Interface"
-  UI(UI) -->|input| BP
-
-  subgraph "Business Process"
-  BP(Proceso de Negocio) -->|nums| Calc
-
-  Calc(Cálculos) -->|result| UI
-
+  subgraph "Business Process Model"
+    Start --> InputData
+    InputData --> Validate
+    Validate --> Error en caso de fallo
+    Validate --> BusinessLogic en caso de éxito
+    BusinessLogic --> WriteOutput
+    WriteOutput --> End
   end
 
-  subgraph "COBOL Legacy"
-  nums = [1,2,3,4,5]
-  Calc = 1+2+3+4+5
-  end
+Subgraph "Código COBOL"
+  InputData((Lectura de Datos))
+  BusinessLogic((Proceso de Negocio))
+  WriteOutput((Escritura de Resultados))
+end
+
+InputData --> Lectura de Datos COBOL
+BusinessLogic --> Reglas de Negocio COBOL
+WriteOutput --> Escritura COBOL de Resultados
