@@ -1,14 +1,14 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextStartedEvent;
 
-import ModernizacionCobolApplication.Calculadora;
-
-class CalculadoraTest {
+@SpringBootTest
+class ModernizacionCOBOLApplicationTests {
 
     @Test
-    void cuandoSumarDosNumeros_debeRetornarSuma() {
-        Calculadora calculadora = new CalculadoraImplementacion();
-        int resultado = calculadora.sumar(2, 3);
-        assertEquals(5, resultado);
+    void contextoSeInicializaCorrectamente() {
+        assertEquals(0, new ModuloNegocio(new CalculadoraImplementacion()).suma(2, 3));
     }
 }

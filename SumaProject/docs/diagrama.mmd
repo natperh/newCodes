@@ -1,19 +1,16 @@
 graph TD
-  subgraph "Business Process Model"
+  subgraph "Modelo de Proceso de Negocios"
     Start --> InputData
     InputData --> Validate
     Validate --> Error en caso de fallo
     Validate --> BusinessLogic en caso de éxito
-    BusinessLogic --> WriteOutput
-    WriteOutput --> End
+    BusinessLogic --> OutputResults
+    OutputResults --> End
   end
 
-Subgraph "Código COBOL"
-  InputData((Lectura de Datos))
-  BusinessLogic((Proceso de Negocio))
-  WriteOutput((Escritura de Resultados))
-end
-
-InputData --> Lectura de Datos COBOL
-BusinessLogic --> Reglas de Negocio COBOL
-WriteOutput --> Escritura COBOL de Resultados
+  Start((Inicio))
+  InputData(Lectura de Datos)
+  Validate(Validar Reglas)  
+  BusinessLogic(Procesar Reglas de <br/>Negocio/Lógica)
+  OutputResults(Escribir Resultados)
+  End((Fin))
