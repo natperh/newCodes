@@ -1,19 +1,14 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextStartedEvent;
 
 @SpringBootTest
-class ServicioNegocioTest {
-
-    @Autowired
-    private ServicioNegocio servicio;
+class ModernizacionCOBOLApplicationTests {
 
     @Test
-    void cuandoSeSumanDosNumeros() {
-        ModeloDominio input = new ModeloDominio(2, 3);
-        int expected = 5;
-        int actual = servicio.operar(input);
-        assertEquals(expected, actual);
+    void contextoSeInicializaCorrectamente() {
+        assertEquals(0, new ModuloNegocio(new CalculadoraImplementacion()).suma(2, 3));
     }
 }

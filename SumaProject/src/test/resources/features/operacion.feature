@@ -1,6 +1,9 @@
 Feature: Suma de dos números
 
-Escenario: Suma exitosa
-   Dado que tengo los números 2 y 3
-   Cuando los sumo
-   Entonces el resultado debe ser 5
+  Escenario: Suma exitosa
+   | num1 | num2 | resultado esperada |
+   |  2   |  3   |        5         |
+
+   Ejemplos:
+   | num1 | num2 |
+   |  5   |  7   |

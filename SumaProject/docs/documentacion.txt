@@ -1,8 +1,10 @@
-1. El programa originally solicita dos números al usuario, los suma y muestra el resultado.
+1. El programa COBOL original realiza una operación de suma de dos números y muestra el resultado en pantalla.
 
 2. Reglas de Negocio:
-   - El programa realiza una suma básica de dos números enteros.
+   - El usuario introduce dos números. (num1, num2)
+   - Se realizan las sumas de los números.
+   - Se muestra el resultado al usuario.
 
 3. Variables Críticas:
-   - num1, num2: Almacenan los dos números a sumar.
-   - resultado: Almacena el resultado final de la operación.
+   - NUM1, NUM2: Almacenan los números introducidos por el usuario.
+   - RESULTADO: Almacena el resultado final de la suma.

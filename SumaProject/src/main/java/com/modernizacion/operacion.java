@@ -15,62 +15,27 @@ public class ModernizacionCOBOLApplication {
     }
 }
 
-class ModeloDominio {
-    private int num1;
-    private int num2;
-    private int resultado;
-
-    public ModeloDominio(int num1, int num2) {
-        this.num1 = num1;
-        this.num2 = num2;
-    }
-
-    public int getNum1() {
-        return num1;
-    }
-
-    public void setNum1(int num1) {
-        this.num1 = num1;
-    }
-
-    public int getNum2() {
-        return num2;
-    }
-
-    public void setNum2(int num2) {
-        this.num2 = num2;
-    }
-
-    public int getResultado() {
-        return resultado;
-    }
-
-    public void setResultado(int resultado) {
-        this.resultado = resultado;
-    }
-}
-
-class ServicioNegocio {
+class ModuloNegocio {
 
     private Calculadora calculadora;
 
-    public ServicioNegocio(Calculadora calculadora) {
+    public ModuloNegocio(Calculadora calculadora) {
         this.calculadora = calculadora;
     }
 
-    public int operar(ModeloDominio modelo) {
-        return calculadora.sumar(modelo.getNum1(), modelo.getNum2());
+    public int suma(int num1, int num2) {
+        return calculadora.suma(num1, num2);
     }
 }
 
 interface Calculadora {
-    int sumar(int a, int b);
+    int suma(int num1, int num2);
 }
 
 class CalculadoraImplementacion implements Calculadora {
 
     @Override
-    public int sumar(int a, int b) {
-        return a + b;
+    public int suma(int num1, int num2) {
+        return num1 + num2;
     }
 }
