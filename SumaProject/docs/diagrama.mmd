@@ -3,21 +3,12 @@ graph TD
     Start --> InputData
     InputData --> Validate
     Validate --> Error en datos
-    Error en datos --> Terminar
-    Validate --> ProcesarReglas
-    ProcesarReglas --> EscribirResultados
-    EscribirResultados --> Terminar
+    Validate --> ProcesoOK
 
-    class InputData {
-        Lectura de dos números enteros
-    }
-    class Validate {
-        Verificar que los datos sean válidos
-    }
-    class ProcesarReglas {
-        Suma de dos números
-    }
-    class EscribirResultados {
-        Mostrar resultado en pantalla
-    }
+    ProcesoOK --> Sumar
+    Sumar --> ResultadoOK
+    ResultadoOK --> Terminar
+
+    Error en datos --> Error
+    Terminar --> Reiniciar
   end
