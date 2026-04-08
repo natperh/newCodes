@@ -1,16 +1,14 @@
 graph TD
-  subgraph "Modelo de Proceso de Negocios"
+  subgraph "Business Process Model"
     Start --> InputData
     InputData --> Validate
-    Validate --> Error en caso de fallo
-    Validate --> BusinessLogic en caso de éxito
-    BusinessLogic --> OutputResults
-    OutputResults --> End
-  end
+    Validate --> Error en datos
+    Validate --> ProcesoOK
 
-  Start((Inicio))
-  InputData(Lectura de Datos)
-  Validate(Validar Reglas)  
-  BusinessLogic(Procesar Reglas de <br/>Negocio/Lógica)
-  OutputResults(Escribir Resultados)
-  End((Fin))
+    ProcesoOK --> Sumar
+    Sumar --> ResultadoOK
+    ResultadoOK --> Terminar
+
+    Error en datos --> Error
+    Terminar --> Reiniciar
+  end
