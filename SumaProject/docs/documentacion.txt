@@ -1,0 +1,8 @@
+1. El programa originally solicita dos números al usuario, los suma y muestra el resultado.
+
+2. Reglas de Negocio:
+   - El programa realiza una suma básica de dos números enteros.
+
+3. Variables Críticas:
+   - num1, num2: Almacenan los dos números a sumar.
+   - resultado: Almacena el resultado final de la operación.

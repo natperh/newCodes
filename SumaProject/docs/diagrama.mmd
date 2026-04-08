@@ -1,0 +1,8 @@
+graph TD
+  subgraph "Modelo de Negocio"
+    Usuario-->Solicitud: Espera suma de dos números
+    Solicitud --> Servicio: Llamada a servicio de suma
+    Servicio --> Proceso: Proceso de suma
+    Proceso --> Resultado: Obtiene resultado
+    Resultado --> Usuario: Devuelve resultado al usuario
+  end
