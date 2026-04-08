@@ -1,9 +1,23 @@
 graph TD
-  subgraph "Flow del Programa"
-    Start --> InputNum1[Ingreso del primer número]
-    InputNum1 --> Validation[Validación de entrada]
-    Validation -- Ok --> Sum[Suma de números]
-    Sum --> DisplayResult[Mostrar resultado]
-    Validation -- Error --> Error
-    DisplayResult --> End
+  subgraph "Business Process Model"
+    Start --> InputData
+    InputData --> Validate
+    Validate --> Error en datos
+    Error en datos --> Terminar
+    Validate --> ProcesarReglas
+    ProcesarReglas --> EscribirResultados
+    EscribirResultados --> Terminar
+
+    class InputData {
+        Lectura de dos números enteros
+    }
+    class Validate {
+        Verificar que los datos sean válidos
+    }
+    class ProcesarReglas {
+        Suma de dos números
+    }
+    class EscribirResultados {
+        Mostrar resultado en pantalla
+    }
   end
