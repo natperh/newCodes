@@ -2,15 +2,12 @@ graph TD
   subgraph "Flow de Negocio"
     Inicio --> LecturaDatos: Lectura de Datos
     LecturaDatos --> Validacion: Validar Reglas
-    Validacion --> |Exito| Proceso: Procesar Reglas Negocio
-    Validacion --> |Fallo| Error
+    Validacion - fallar -> Error;
+    Validacion - éxito -> Proceso: Procesar Reglas Negocio
     Proceso --> EscribirDatos: Escribir Resultados
-    EscribirDatos --> FinProceso
-    subgraph "Flow Técnico"
-    LecturaDatosSuma --> LógicaSuma[Lógica de Suma <br/> <code>service.suma(num1, num2)</code>]
-    LecturaDatosCOBOL[Lectura Datos COBOL] --> LecturaDatosSuma
-    ValidacionReglas[Validación de Reglas] --> Validacion
-    ProcesoReglas[Proceso de Reglas Negocio] --> Proceso
-    EscribirSalida[Escritura de Salida] --> EscribirDatos
+    EscribirDatos --> FinProceso: Fin Proceso
+    class LecturaDatos text: Lectura de Datos COBOL;
+    class Validacion text: Validar\nReglas de Negocio;
+    class Proceso text: Procesar\nReglas Negocio;
+    class EscribirDatos text: Escribir\nSalida de Resultados;
   end
-end
