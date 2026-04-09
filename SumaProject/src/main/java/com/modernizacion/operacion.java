@@ -3,9 +3,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class ModernizacionCobolApplication {
+public class ModernizacionCOBOLApplication {
 
     public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(ModernizacionCobolApplication.class, args);
+        ApplicationContext context = SpringApplication.run(ModernizacionCOBOLApplication.class, args);
     }
 }
