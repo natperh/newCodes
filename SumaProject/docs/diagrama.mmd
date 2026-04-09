@@ -1,14 +1,25 @@
 graph TD
-  subgraph "Business Process Model"
-    Start --> InputData
-    InputData --> Validate
-    Validate --> Error en datos
-    Validate --> ProcesoOK
-
-    ProcesoOK --> Sumar
-    Sumar --> ResultadoOK
-    ResultadoOK --> Terminar
-
-    Error en datos --> Error
-    Terminar --> Terminado
+  subgraph "User Input"
+  ID1(Introduce el primer número) -->|num1| IN1(5);
+  ID2(Introduce el segundo número) -->|num2| IN2(10);
   end
+
+  subgraph "Business Logic"
+  B1(Sumar) -->|input| B2(Validar);
+  B2 -->|fallo| B3(Mostrar error);
+  B2 -->|éxito| B4(Calcular);
+  end
+
+  B4 -->|resultado| OUT1(El resultado es 15);
+  classDef business stroke:#4D79FF,color:#4D79FF;
+  classDef input stroke:#FF9933,color:#FF9933;
+  classDef output stroke:#99FF99,color:#99FF99;
+
+  subgraph "Output"
+  end
+
+  IN1 --> B1;
+  IN2 --> B1;
+  B3 --> OUT1;
+  B4 --> OUT1;
+  linkStyle 2 stroke-width:4px;
