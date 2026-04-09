@@ -6,6 +6,6 @@ Escenario: Suma exitosa
    Entonces el resultado debe ser 15
 
 Escenario: Suma con error
-   Dado que un número es negativo
-   Cuando sumo los dos números
-   Entonces debe mostrar un mensaje de error
+   Dado que tengo el número 0
+   Cuando sumo con 5
+   Entonces el resultado debe ser "Error: Sumando no válido"

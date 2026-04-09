@@ -1,13 +1,9 @@
 graph TD
-  subgraph "Flow de Negocio"
+  subgraph "Flujo de Negocio"
     Inicio --> LecturaDatos: Lectura de Datos
     LecturaDatos --> Validacion: Validar Reglas
-    Validacion --> |Éxito| Proceso: Procesar Reglas Negocio
-                    |Fallo|  Error
-    Proceso --> EscribirDatos: Escribir Resultados
+    Validacion -->|Fallo| Error
+    Validacion -->|Éxito| ProcesoReglas
+    ProcesoReglas --> EscribirDatos: Escribir Resultados
     EscribirDatos --> FinProceso
-    subgraph "Flow COBOL original"
-    LecturaDatosCOBOL --> ValidacionCOBOL
-    ValidacionCOBOL --> ProcesamientoCOBOL
-    ProcesamientoCOBOL --> SalidaCOBOL
   end
