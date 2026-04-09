@@ -1,13 +1,9 @@
 graph TD
-  subgraph "Flow de Negocio"
-    Inicio --> LecturaDatos: Lectura de Datos
-    LecturaDatos --> Validacion: Validar Reglas
-    Validacion - fallar -> Error;
-    Validacion - éxito -> Proceso: Procesar Reglas Negocio
-    Proceso --> EscribirDatos: Escribir Resultados
-    EscribirDatos --> FinProceso: Fin Proceso
-    class LecturaDatos text: Lectura de Datos COBOL;
-    class Validacion text: Validar\nReglas de Negocio;
-    class Proceso text: Procesar\nReglas Negocio;
-    class EscribirDatos text: Escribir\nSalida de Resultados;
+  subgraph "Business Process Model"
+    Start --> InputData
+    InputData --> Validate
+    Validate --> ErrorEnd
+    Validate --> BusinessLogic
+    BusinessLogic --> OutputResults
+    OutputResults --> SuccessEnd
   end
